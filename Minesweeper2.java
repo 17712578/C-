@@ -24,6 +24,7 @@ import java.io.*;
 			mines = m;
 			dArr = new char[r][c];
 		}
+		
 		public void boardsize ()
 		{
 			System.out.println("Enter number of rows");
@@ -42,24 +43,18 @@ import java.io.*;
 		public void menu () 
 		{
 			System.out.println("1. New Game");
-			System.out.println("2. Highsores");
-			System.out.println("3. Quit");
+			System.out.println("2. Quit");
 			Scanner sc = new Scanner(System.in);
 			int optionsel = sc.nextInt();
 			
 			switch (optionsel){
 			case 1: 
-				System.out.println("Chose your options");
 				boardsize();
 				break;
 			case 2:
-				System.out.println("Shaun : 1000 points");
-				break;
-			case 3:
 				System.out.println("Game ended");
 				break;
 			}
-			
 		}
 		
 
@@ -68,8 +63,8 @@ import java.io.*;
 			
 			for (int i=0;i<mines;i++)		// Ten mines for now
 				{
-					int xcor = (int )(Math.random() * nrow + 0.5); //generating a x coordinate 
-					int ycor = (int )(Math.random() * ncol + 0.5); //generating a y coordinate 
+					int xcor = (int )(Math.random() * ncol + 0.5); //generating a x coordinate 
+					int ycor = (int )(Math.random() * nrow + 0.5); //generating a y coordinate 
 						
 						if (dArr[xcor][ycor] == 'm') // if a mine is already in that place
 							{
@@ -81,12 +76,15 @@ import java.io.*;
 							}
 				}	 
 				 SetNumbers();
-				 cursor();
+				 printboard();
+				 // cursor();
 		}
 			
 			
-		public void printboard(int x, int y)
+		public void printboard()
 		{
+			int x = 1;
+			int y = 1;
 			System.out.println();	
 			for (int a=0;a<nrow;a++)		// Printing the board now everything is in place
 				{
@@ -111,38 +109,39 @@ import java.io.*;
 					}
 					System.out.println();		// space the board out
 				}
-				cursor2(x,y);	
+				// cursor2(x,y);	
 		}
 		
-		public void cursor ()
-		{	
-			int x =1 ;
-			int y =1 ;
-			printboard(x, y);
-		}
-			public void cursor2 (int q, int w)
-			{	
-				Scanner s= new Scanner(System.in);
-				char typesel = s.next().charAt(0);
+		// public void cursor ()
+		// {	
+			// int x =1 ;
+			// int y =1 ;
+			// printboard(x, y);
+		// }
+		
+			// public void cursor2 (int q, int w)
+			// {	
+				// Scanner s= new Scanner(System.in);
+				// char typesel = s.next().charAt(0);
 				
-				if(typesel == 's')
-				{
-					q = q + 1;
-				}
-				else if (typesel == 'w')
-				{
-					q = q - 1;
-				}
-				else if (typesel == 'd')
-				{
-					w = w + 1;
-				}					
-				else if (typesel == 'a')
-				{
-					w = w - 1;
-				}
-			printboard(q, w);
-			}
+				// if(typesel == 's')
+				// {
+					// q = q + 1;
+				// }
+				// else if (typesel == 'w')
+				// {
+					// q = q - 1;
+				// }
+				// else if (typesel == 'd')
+				// {
+					// w = w + 1;
+				// }					
+				// else if (typesel == 'a')
+				// {
+					// w = w - 1;
+				// }
+			// printboard(q, w);
+			// }
 		
 		private void SetNumbers()
 		{
