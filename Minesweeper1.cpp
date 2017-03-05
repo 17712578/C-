@@ -1,5 +1,4 @@
-import java.util.*;
-import java.io.*;
+#include <iostream>
 
 	public class minesweeper1
 		{
