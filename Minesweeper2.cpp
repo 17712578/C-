@@ -1,20 +1,22 @@
 #include <iostream>
 
-	public class minesweeper2
-	{
-		private int nrow;
-		private int ncol;
-		private int mines;
-		private char[][] dArr;
+	class minesweeper2
+	 {
+		 private 
+		 int nrow;
+		 int ncol;
+		 int mines;
+		 char[][] dArr;
+		
 
 		
-		public minesweeper2 (int r , int c, int m) //Constructor
-		{
-			nrow = r;
-			ncol = c;
-			mines = m;
-			dArr = new char[r][c];
-		}
+		// public minesweeper2 (int r , int c, int m) //Constructor
+		// {
+			// nrow = r;
+			// ncol = c;
+			// mines = m;
+			// dArr = new char[r][c];
+		// }
 		
 		// private void customsweeper2 (int r , int c, int m) //Constructor
 		// {
@@ -24,18 +26,21 @@
 			// dArr = new char[r][c];
 		// }
 		
-		// public void boardsize ()
-		// {
-			// System.out.println("Enter number of rows");
-			// Scanner sr = new Scanner(System.in);
-			// int r = sr.nextInt();
-			// System.out.println("Enter number of columns");
-			// Scanner sc = new Scanner(System.in);
-			// int c = sc.nextInt();
-			// System.out.println("Enter number of mines");
-			// Scanner sm = new Scanner(System.in);
-			// int m = sm.nextInt();
-			// customsweeper2(r,c,m);
+		// public void boardsize ()			// Working on changing this function to c++
+		 {
+			int rows; 
+			cout << "Enter number of rows";
+			cin >> rows;
+			
+			int columns;
+			cout << "Enter number of columns";
+			cin >> columns;
+			
+			int mines;
+			cout << "Enter number of mines";
+			cin >> mines;
+			
+			customsweeper2(rows,columns,mines); //???
 			// play();
 		// }
 		
