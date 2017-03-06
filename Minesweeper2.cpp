@@ -36,7 +36,7 @@ using namespace std;
 		cout << "Enter number of mines";
 		cin >> mines;
 		
-		minesweeper2(rows,columns,mines); //???
+		Constructor(rows,columns,mines); //???
 		// play();
 	}
 		
