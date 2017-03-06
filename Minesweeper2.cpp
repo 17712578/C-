@@ -1,48 +1,44 @@
 #include <iostream>
+using namespace std;
 
 	class minesweeper2
-	 {
-		 private 
+	{
+		public:
+		 void Constructor(int,int,int);
+		 
+		private:
 		 int nrow;
 		 int ncol;
 		 int mines;
-		 char[][] dArr;
+		 char dArr[20][20];
+		 
+	};
+	
+	void minesweeper2::Constructor(int r, int c, int m) //Constructor
+	{
+		nrow = r;
+		ncol = c;
+		mines = m;
+		dArr = new char[r][c];
+	}
+	
+	void boardsize ()			// Working on changing this function to c++
+	{
+		int rows; 
+		cout << "Enter number of rows";
+		cin >> rows;
 		
-
+		int columns;
+		cout << "Enter number of columns";
+		cin >> columns;
 		
-		// public minesweeper2 (int r , int c, int m) //Constructor
-		// {
-			// nrow = r;
-			// ncol = c;
-			// mines = m;
-			// dArr = new char[r][c];
-		// }
+		int mines;
+		cout << "Enter number of mines";
+		cin >> mines;
 		
-		// private void customsweeper2 (int r , int c, int m) //Constructor
-		// {
-			// nrow = r;
-			// ncol = c;
-			// mines = m;
-			// dArr = new char[r][c];
-		// }
-		
-		// public void boardsize ()			// Working on changing this function to c++
-		 {
-			int rows; 
-			cout << "Enter number of rows";
-			cin >> rows;
-			
-			int columns;
-			cout << "Enter number of columns";
-			cin >> columns;
-			
-			int mines;
-			cout << "Enter number of mines";
-			cin >> mines;
-			
-			customsweeper2(rows,columns,mines); //???
-			// play();
-		// }
+		minesweeper2(rows,columns,mines); //???
+		// play();
+	}
 		
 		// public void menu () 
 		// {
@@ -149,7 +145,7 @@
 		
 		// private void SetNumbers()
 		// {
-			set numbers
+			// set numbers
 			// for(int i=0; i<nrow; i++)		// rows, 
 			// {
 				// for(int j=0; j<ncol; j++)	//columns, so it scan left to right and then down the rows
@@ -172,6 +168,6 @@
 			// }
 
 		// }
-	}
+	
 
   
