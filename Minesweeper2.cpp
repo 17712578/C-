@@ -4,7 +4,8 @@ using namespace std;
 	class minesweeper2
 	{
 		public:
-		 void Constructor(int,int,int);
+		 void Constructor(int,int);
+		 void boardsize();
 		 
 		private:
 		 int nrow;
@@ -14,12 +15,16 @@ using namespace std;
 		 
 	};
 	
-	void minesweeper2::Constructor(int r, int c, int m) //Constructor
+	void minesweeper2::Constructor(int r, int c) //Constructor
 	{
-		nrow = r;
-		ncol = c;
-		mines = m;
-		dArr = new char[r][c];
+		int **arraysize;
+		
+		arraysize = new int *[r];
+		for (int count = 0; count < r; count++)
+		{
+			arraysize[count] = new int[c];
+		}
+	
 	}
 	
 	void boardsize ()			// Working on changing this function to c++
@@ -32,11 +37,7 @@ using namespace std;
 		cout << "Enter number of columns";
 		cin >> columns;
 		
-		int mines;
-		cout << "Enter number of mines";
-		cin >> mines;
-		
-		Constructor(rows,columns,mines); //???
+		Constructor(rows,columns); //???
 		// play();
 	}
 		
